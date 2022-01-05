@@ -24,7 +24,7 @@ const useStyles = makeStyles({
   },
   upIcon: {
     position: "absolute",
-    top: "15%",
+    top: "35%",
     cursor: "pointer",
     zIndex: 1,
   },
