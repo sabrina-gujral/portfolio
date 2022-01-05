@@ -19,12 +19,14 @@ const useStyles = makeStyles({
   },
   profession: {
     color: "#fff",
-    fontWeight: 800,
+    fontWeight: 500,
     letterSpacing: "0.1rem",
   },
   upIcon: {
-    position: "fixed",
+    position: "absolute",
     top: "15%",
+    cursor: "pointer",
+    zIndex: 1,
   },
 });
 

@@ -7,27 +7,24 @@
         (-0.5+ (random()) * 3) +
         em
         7px
-        hsla(random() * 360, 90%, 50%, 0.7);
+        hsla(7 * 192, 90%, 50%, 0.7);
   }
   text-shadow: $text-shadow;
 }
 
-html {
+.root {
   overflow: hidden;
-  background: #123;
+  background: #000;
 }
 
-body,
-head {
+.root {
   display: block;
   font-size: 50px;
   color: transparent;
 }
 
-head::before,
-head::after,
-body::before,
-body::after {
+.root::before,
+.root::after {
   position: fixed;
   top: 50%;
   left: 50%;
@@ -38,28 +35,16 @@ body::after {
   animation: 44s -27s move infinite ease-in-out alternate;
 }
 
-body::before {
+.root::before {
   @include dots(40);
   animation-duration: 44s;
   animation-delay: -27s;
 }
 
-body::after {
+.root::after {
   @include dots(40);
   animation-duration: 43s;
   animation-delay: -32s;
-}
-
-head::before {
-  @include dots(40);
-  animation-duration: 42s;
-  animation-delay: -23s;
-}
-
-head::after {
-  @include dots(40);
-  animation-duration: 41s;
-  animation-delay: -19s;
 }
 
 @keyframes move {
