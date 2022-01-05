@@ -1,43 +1,29 @@
 import React from "react";
-import { Typography, Box, Grid, Divider } from "@mui/material";
+import { Typography, Box, IconButton } from "@mui/material";
+import KeyboardArrowUpIcon from "@mui/icons-material/KeyboardArrowUp";
 import { fontFamily } from "@mui/system";
+import "./animatio.scss";
+import useStyles from "./HeaderStyles";
 
 const Header = () => {
+  const classes = useStyles();
   return (
     <>
-      <Box p={4}>
-        <Grid
-          container
-          direction="row"
-          justifyContent="center"
-          alignItems="center"
-        >
-          <Grid item sm={8}>
-            <Box ml={10} mt={5}>
-              <Typography variant="h4" color="secondary">
-                Hello,
-              </Typography>
-              <Typography variant="h2" color="primary">
-                I am{" "}
-                <span
-                  style={{
-                    color: "#fff",
-                    fontWeight: 800,
-                    fontSize: "5rem",
-                    letterSpacing: "0.3rem",
-                  }}
-                >
-                  Sabrina Gujral
-                </span>{" "}
-                and I am a Full Stack Web Developer.
-              </Typography>
-            </Box>
-            <Divider sx={{ color: "#fff" }} orientation="horizontal" />
-          </Grid>
-          <Grid item sm={4}>
-            <Box></Box>
-          </Grid>
-        </Grid>
+      <Box p={4} className={classes.root}>
+        <Box className={classes.container}>
+          <Typography variant="h5" color="secondary">
+            Hello,
+          </Typography>
+          <Typography variant="h2" color="primary">
+            I am <span className={classes.name}>Sabrina Gujral</span>{" "}
+          </Typography>
+          <Typography variant="h4" color="primary">
+            <span className={classes.profession}>Web Developer.</span>
+          </Typography>
+        </Box>
+        <IconButton className={classes.upIcon} color="primary">
+          <KeyboardArrowUpIcon />
+        </IconButton>
       </Box>
     </>
   );
